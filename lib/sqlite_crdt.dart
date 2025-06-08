@@ -16,6 +16,8 @@ export 'package:sql_crdt/sql_crdt.dart';
 class SqliteCrdt extends SqlCrdt {
   final Database _db;
 
+  Database get rawDB => _db;
+
   SqliteCrdt._(this._db) : super(ExecutorApi(_db));
 
   /// Open or create a SQLite container as a SqlCrdt instance.
